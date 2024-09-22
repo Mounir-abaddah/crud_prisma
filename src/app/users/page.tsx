@@ -137,7 +137,7 @@ export default function UsersList() {
     </td>
     <td className="py-2 px-4 border-b">
       <button onClick={() => handleEdit(user)} className="bg-blue-500 text-white px-4 py-2 rounded-lg mr-2">Editer</button>
-      <button onClick={() => handeedit(user.id)} className="bg-red-500 text-white px-4 py-2 rounded-lg">Supprimer</button>
+      <button onClick={() => handleDelete(user.id)} className="bg-red-500 text-white px-4 py-2 rounded-lg">Supprimer</button>
     </td>
   </tr>
 ))}
