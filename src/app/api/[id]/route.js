@@ -5,12 +5,10 @@ export async function DELETE(req, { params }) {
   const userId = params.id;
 
   try {
-    // Supprimer d'abord les images associées à l'utilisateur
     await prisma.image.deleteMany({
       where: { userId: Number(userId) },
     });
 
-    // Ensuite, supprimer l'utilisateur
     const deletedUser = await prisma.user.delete({
       where: { id: Number(userId) },
     });
