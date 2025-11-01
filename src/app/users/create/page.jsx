@@ -26,7 +26,7 @@ export default function CreateUser() {
     if (res.ok) {
       const newUser = await res.json();
       console.log('Utilisateur créé avec succès:', newUser);
-      router.push('/users'); // Redirige vers la liste des utilisateurs
+      router.push('/users');
     } else {
       console.error('Erreur lors de la création de l\'utilisateur');
     }
