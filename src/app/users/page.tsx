@@ -29,7 +29,7 @@ export default function UsersList() {
 
   const handleUpdate = async (e) => {
     e.preventDefault();
-    console.log(editingUser);  // Vérifier l'utilisateur en édition
+    console.log(editingUser);
     const res = await fetch(`/api/users/${editingUser.id}`, {
       method: 'PUT',
       headers: {
@@ -48,7 +48,7 @@ export default function UsersList() {
     } else {
       const updatedUser = await res.json();
       setUsers(users.map((user) => (user.id === updatedUser.id ? updatedUser : user)));
-      setEditingUser(null);  // Fermer le formulaire
+      setEditingUser(null);
     }
   };
   
