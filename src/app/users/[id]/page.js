@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 export default function UserDetails({ params }) {
   const [user, setUser] = useState(null);
   const router = useRouter();
-  const { id } = params;  // Obtenir l'ID de l'utilisateur à partir des paramètres d'URL
+  const { id } = params;
 
   useEffect(() => {
     async function fetchUser() {
